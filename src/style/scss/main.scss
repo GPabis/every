@@ -1,0 +1,53 @@
+@import "./variable";
+@import "./utilities.scss";
+@import "./nav.scss";
+@import "./header.scss";
+@import "./about.scss";
+@import "./info.scss";
+@import "./more.scss";
+@import "./offer.scss";
+@import "./footer.scss";
+@import "./hamburgers/hamburgers.scss";
+* {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: $font-primary;
+}
+
+h1 {
+  font-size: 4.4rem !important;
+}
+
+h2 {
+  font-size: 2.4rem !important;
+  font-weight: 200;
+}
+
+ul {
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+
+.row {
+  margin: 0px !important;
+  padding: 0px !important;
+}

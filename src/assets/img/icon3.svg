@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 89" width="46" height="47">
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none;stroke: #000;stroke-linecap:round;stroke-linejoin:round;stroke-width: 4 } 
+	</style>
+	<g id="Layer 2">
+		<g id="&lt;Group&gt;">
+			<path id="&lt;Path&gt;" class="shp0" d="M80.28 48.02C80.28 69.41 62.94 86.75 41.55 86.75C20.16 86.75 2.82 69.41 2.82 48.02C2.82 26.63 20.16 9.29 41.55 9.29" />
+			<path id="&lt;Path&gt;" class="shp0" d="M43.01 1.88C42.72 1.88 42.82 1.92 42.82 1.93L42.82 46.72L87.66 46.72C87.66 46.72 88.04 46.85 88.04 46.58C88.04 21.52 68.06 1.88 43.01 1.88Z" />
+		</g>
+	</g>
+</svg>

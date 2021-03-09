@@ -1,0 +1,156 @@
+.header {
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+
+  &__slider {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -10;
+    outline: none;
+
+    .header__slide {
+      height: 100vh;
+      width: 100vw;
+      min-height: 60rem;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+
+      &--first {
+        background-image: url(/dist/assets/img/Background.png);
+      }
+
+      &--secound {
+        background-image: url(/dist/assets/img/Background.png);
+      }
+
+      &--third {
+        background-image: url(/dist/assets/img/Background.png);
+      }
+    }
+  }
+
+  .slick-list::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    background: #000000;
+    opacity: 0.5;
+    top: 0;
+  }
+
+  .slick-dots {
+    position: absolute;
+    top: calc(50% - 12rem);
+    margin-left: 12vw;
+    padding: 1rem 0;
+    list-style-type: none;
+
+    li {
+      margin: 3.5rem 0;
+
+      &::after {
+        content: "";
+        position: relative;
+        top: 17px;
+        display: block;
+        width: 1px;
+        height: 3.5rem;
+        margin-left: 3px;
+        background: #ffffff;
+      }
+
+      &:last-child::after {
+        width: 0;
+        height: 0;
+      }
+    }
+
+    button {
+      display: block;
+      height: 7px;
+      width: 7px;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background: #ffffff;
+      text-indent: -9999px;
+    }
+
+    li.slick-active button {
+      background: none;
+      height: 8px;
+      width: 8px;
+      border: 1px solid #ffffff;
+    }
+
+    @media (max-width: 992px) {
+      z-index: 100;
+      margin: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      top: 68%;
+
+      li {
+        margin: 0;
+
+        &::after {
+          content: "";
+          width: 3.5rem;
+          height: 1px;
+          top: -4px;
+          margin-left: 3rem;
+        }
+
+        button {
+          margin-left: 1rem;
+        }
+      }
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    .header__title {
+      @media (max-width: 1100px) {
+        font-size: 35px !important;
+      }
+    }
+
+    .header__subtitle {
+      @media (max-width: 1100px) {
+        font-size: 20px !important;
+      }
+    }
+
+    .header__button {
+      margin-top: 3rem;
+      background: none;
+      border: 1px solid #ffffff;
+      padding: 1.2rem 2.7rem;
+      border-radius: 20px;
+      transition: all 0.5s;
+
+      &:hover {
+        background: #ffffff;
+        color: #000000 !important;
+      }
+    }
+  }
+}

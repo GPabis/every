@@ -1,0 +1,129 @@
+.nav {
+  position: fixed;
+  right: 0px;
+  height: 13.5rem;
+  width: 100%;
+  background: rgba(#000000, 0);
+  z-index: 10;
+  transition: background-color 1s, height 1s;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 2rem 0;
+
+    .nav__logo {
+      height: 9.5rem;
+      margin-left: 12vw;
+      transition: height 1s;
+    }
+
+    .nav__menu {
+      margin-right: 12vw !important;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+
+      .nav__item {
+        margin: 1rem;
+        font-size: 1.2rem;
+        color: #fff;
+
+        &--dot {
+          display: block;
+          background: #fff;
+          height: 6px;
+          width: 6px;
+          border: 1px solid #ffffff;
+          border-radius: 50%;
+        }
+
+        .nav__link {
+          font-size: 1.2rem;
+          letter-spacing: 1px;
+          line-height: 44px;
+          font-weight: 700;
+        }
+      }
+
+      @media (max-width: 992px) {
+        display: none;
+      }
+    }
+
+    .hamburger {
+      outline: none !important;
+      display: none;
+
+      @media (max-width: 992px) {
+        display: block;
+        margin-right: 12vw;
+      }
+    }
+  }
+
+  .nav__mobile-menu {
+    width: 100%;
+    background-color: none;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    transition: backgroudn-color 0.3s, height 0.3s;
+
+    .nav__item {
+      width: 20rem;
+      padding: 1rem 0;
+      text-align: center;
+      border-bottom: solid 1px #fff;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .nav__link {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
+
+.scrolled {
+  background-color: #111;
+  height: 9rem;
+  transition: background-color 1s, height 1s;
+
+  .nav__logo {
+    height: 5rem;
+    transition: height 1s;
+  }
+
+  .nav__container {
+    margin: 1rem 0;
+  }
+}
+
+.dark {
+  background-color: #111;
+  transition: none;
+}
+
+.mobile-active {
+  @media (max-width: 992px) {
+    display: flex !important;
+    z-index: -1;
+    background-color: #111 !important;
+    animation: show 0.3s ease-in-out;
+  }
+}
+
+.mobile-disable {
+  display: flex !important;
+  position: absolute;
+  top: -1000px;
+  z-index: -1;
+  background-color: #111 !important;
+  animation: hide 0.3s ease-in;
+}

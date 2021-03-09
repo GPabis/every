@@ -1,0 +1,61 @@
+.text-link {
+  color: #fff;
+  opacity: 1;
+  transition: 0.3s opacity;
+
+  &:hover {
+    opacity: 0.8;
+    color: #fff;
+  }
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-yellow {
+  color: $color-primary;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes show {
+  0% {
+    position: absolute;
+    transform: translateY(-1000px);
+  }
+  100% {
+    transform: translateY(0px);
+    position: static;
+  }
+}
+
+@keyframes hide {
+  0% {
+    position: static;
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-1000px);
+  }
+}

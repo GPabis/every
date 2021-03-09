@@ -1,0 +1,119 @@
+.about {
+  background: #000000;
+  position: relative;
+  padding-bottom: 3rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -400px;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 255));
+  }
+
+  .about__header {
+    display: flex;
+    flex-direction: column;
+    padding-left: 6rem;
+
+    .about__title {
+      letter-spacing: 2px;
+      font-size: 33px !important;
+
+      @media (max-width: 992px) {
+        font-size: 29px;
+      }
+
+      @media (min-width: 1500px) {
+        font-size: 43px !important;
+      }
+
+      @media (min-width: 1300px) {
+        font-size: 38px !important;
+      }
+    }
+
+    .about__subtitle {
+      font-size: 28px;
+
+      @media (max-width: 992px) {
+        font-size: 23px;
+      }
+
+      @media (min-width: 1500px) {
+        font-size: 35px;
+      }
+
+      @media (min-width: 1300px) {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+    }
+  }
+  .about__text {
+    font-size: 13px !important;
+    line-height: 23px;
+    padding: 0 1rem;
+  }
+
+  .about__text--padding {
+    padding-right: 3rem;
+  }
+
+  &__readmore {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-right: 4rem;
+
+    &-link {
+      font-size: 1.6rem;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .arrow {
+      width: 50px;
+      margin-right: 1rem;
+    }
+
+    .line {
+      margin-top: 4px;
+      width: 40px;
+      background: #fff;
+      height: 2px;
+      float: left;
+    }
+
+    .point {
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 10px solid #fff;
+      float: right;
+    }
+
+    .about__readmore-link:hover ~ .arrow {
+      animation: 1s linear infinite move;
+
+      .line {
+        background-color: $color-primary;
+      }
+
+      .point {
+        border-left-color: $color-primary;
+      }
+    }
+  }
+}
