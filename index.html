@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WGM2H5V');</script>
+  <!-- End Google Tag Manager -->
   <link rel="stylesheet" href="dist/style/style.min.css">
   <link rel="stylesheet" href="./dist/assets/lib/slick/slick.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -14,7 +23,10 @@
   <title>Document</title>
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WGM2H5V"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
   <nav class="nav">
     <div class="nav__container">
       <img src="dist/assets/img/everywherelogo.svg" alt="Logo Everywhere" class="nav__logo">
@@ -56,7 +68,7 @@
       <div class="header__textbox">
         <h1 class="text-white header__title">Building Brands. Getting Results.</h1>
         <h2 class="text-uppercase text-white header__subtitle">Find your voice | Reach your customers | Hit your goals</h2>
-        <button class="header__button text-uppercase text-white ">Czytaj Więcej</button>
+        <button id="cat" class="header__button text-uppercase text-white ">Check our offer!</button>
       </div>
     </header>
 
@@ -128,19 +140,35 @@
       <div class="row">
         <div class="col-md-6 more__img"></div>
         <div class="col-md-6 more__textbox">
-          <h2 class="more__title">Innowacyjne rozwiązania
-            dla górnictwa.</h2>
-          <p class="more__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea odio excepturi aspernatur voluptatem exercitationem debitis dignissimos, deserunt ab incidunt, deleniti dolor magni, in nobis at culpa ut ducimus harum voluptatibus!</p>
-          <p class="more__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia minima esse ea nobis delectus, dolorum molestiae labore hic dolore optio, sit neque non cum ex?</p>
-          <button class="more__button text-uppercase">Czytaj Więcej</button>
+          <h2 class="more__title">Skontaktuj się z nami</h2>
+          <form>
+            <div class="form-group">
+              <input type="text" class="form-control" id="name" placeholder="Imię i Nazwisko">
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control" id="email" placeholder="Adres Email">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="phone" placeholder="Numer Telefonu">
+            </div>
+            <div class="form-group">
+              <textarea class="form-control" id="message" rows="3" placeholder="Wiadomość"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Wyślij</button>
+          </form>
         </div>
       </div>
     </section>
 
-    <section class="offer">
       <h2 class="offer__title">Nasza oferta.</h2>
       <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit sequi eum suscipit! Nemo error perferendis accusantium fugiat. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt, quaerat.</p>
       <p class="offer__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab deleniti fuga nesciunt minus culpa sed dolor rerum. Est ratione mollitia similique! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa id blanditiis placeat vitae dolores expedita sapiente!</p>
+      <div style="display: flex; justify-content: center; align-items: center; width: 100%; height: 100%;">
+        <iframe class="offer__title" width="420" height="315"
+                src="https://www.youtube.com/embed/WcgsgA3QFy4">
+        </iframe>
+      ></div>
+
       <div class="row offer__items">
         <div class="offer__item offer__item--1  col-lg-6">
           <h3 class="offer__name text-uppercase">Rury z tworzyw sztucznych</h3>

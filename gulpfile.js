@@ -1,6 +1,6 @@
 const gulp = require('gulp'),
       gulpCli = require('gulp-cli'),
-      gulpSass = require('gulp-sass'),
+      gulpSass = require('gulp-sass')(require('sass')),
       gulpConcat = require('gulp-concat'),
       gulpUglify = require('gulp-uglify'),
       imagemin = require('gulp-imagemin'),
